@@ -7,8 +7,7 @@
 using namespace std;
 int Count(char* str)
 {
-    if (strlen(str) < 3)
-        return 0;
+
     int k = 0;
     for (int i = 0; str[i] != 0; i++)
         if (str[i] == '+' || str[i] == '-' || str[i] == '=')
