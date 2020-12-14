@@ -5,39 +5,42 @@
 #include <iomanip>
 
 using namespace std;
-int CountMax(char* word)
+ int Count(char* str)
 {
-    int max = 0,i=0;
-    while (word[i] != NULL)
-    {
-        max++;
-        i++;
-        if (word[i] == '.' || word[i] == ',' || word[i] == '-' || word[i] == '"' || word[i] == '!' || word[i] == '?')
-            max = max - 1;
-    }
-    return max;
-
+	int k = 0,max=0;
+	for (int i = 0; str[i] != EOF; i++)
+		if (str[i] == ' ')
+			k++;
+		else
+			if (k > max)
+			{
+				max = k;
+				k = 0;
+			}
+			else k = 0;
+		
+	return max;
 }
 int main()
 {
-    char ch;
-    char word[101];
-    ifstream t;
-    t.open("1.txt");
-    if (!t.is_open())
-    {
-        cout << "Файл не відкрито!" << endl;
-        return 0;
-    }
-    int max = 0;
-    while (t>>word)
-    {
-        if (max < CountMax(word))
-            max = CountMax(word);
-    }
+	/*FILE* t;
+	char ch;
+	char str[101];
 
-    cout << "Length of the biggest word :" << max;
-    t.close();
+	if ((t = fopen("1.txt", "r")) == NULL)
+	{
+		cerr << "Error opening file '" << "1.txt" << "'" << endl;
+		exit(1);
+	}
+	int i = 0;
+	do {
+		ch = getc(t);
+		str[i] = ch;
+		i++;
+	} while (ch != EOF);
+    cout << "Length of the biggest number of spaces:" << Count(str);
+	
+    fclose(t);*/
     return 0;
 }
 
