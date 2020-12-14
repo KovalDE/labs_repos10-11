@@ -1,0 +1,4 @@
+﻿  Lab 11.2(A).cpp
+W:\Labs AP\Lab 11.2(A)\Lab 11.2(A)\Lab 11.2(A).cpp(89,10): warning C4244: инициализация: преобразование "double" в "int", возможна потеря данных
+W:\Labs AP\Lab 11.2(A)\Lab 11.2(A)\Lab 11.2(A).cpp(92,11): warning C4244: инициализация: преобразование "double" в "int", возможна потеря данных
+  Lab 11.2(A).vcxproj -> W:\Labs AP\Lab 11.2(A)\Debug\Lab 11.2(A).exe
